@@ -18,6 +18,10 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Add the column marc for 80 chars
+set colorcolumn=+1
+set colorcolumn=80
+
 " set macvim specific stuff
 if has("gui_macvim")
   set guifont=Monaco:h14
