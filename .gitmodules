@@ -21,7 +21,7 @@
 	url = git://github.com/nvie/vim-rst-tables.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
-	url = http://github.com/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
@@ -112,3 +112,13 @@
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort
+[submodule "vim/bundle/vim-projectroot"]
+	path = vim/bundle/vim-projectroot
+	url = https://github.com/dbakker/vim-projectroot
+	ignore = dirty
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
