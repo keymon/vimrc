@@ -634,10 +634,6 @@ au filetype vim set formatoptions-=o
                      " for vim files, so explicitly unset it again
 " }}}
 
-" Extra user or machine specific settings {{{
-source ~/.vim/user.vim
-" }}}
-
 " Creating underline/overline headings for markup languages
 " Inspired by http://sphinx.pocoo.org/rest.html#sections
 nnoremap <leader>1 yyPVr=jyypVr=
@@ -851,3 +847,8 @@ nnoremap <leader>A :RopeAutoImport<cr>
 " insert mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Extra user or machine specific settings {{{
+source ~/.vim/user.vim
+" }}}
+
