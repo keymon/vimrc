@@ -10,6 +10,9 @@ call pathogen#infect('~/.my_vim/vim/bundle')
 
 " Misc options and settings {{{
 set swapfile                  " I want to keep the swapfiles (nvie does not)
+
+source $VIMRUNTIME/mswin.vim  " I DO like the M$ copy&paste (via http://vim.wikia.com/wiki/Copy,_cut_and_paste)
+
 "}}}
 
 " Enable colors in gnome-terminal.
@@ -41,6 +44,7 @@ if has("gui_running")
     macmenu &File.New\ Tab key=<D-T>        " 'New Tab' is now Shift-Command-T
     map <D-t> :FuzzyFinderFile<CR>
 
+    set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
     "macmenu &File.Open\.\.\. key=<nop>      " free up Command-O
     "imap <D-o> <C-o>o
     "imap <D-O> <C-o>O
@@ -54,7 +58,6 @@ if has("gui_running")
   endif
 
   set lines=50 columns=140 " Initial size
-  set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
 endif
 
 
@@ -129,4 +132,16 @@ nnoremap <right> l
 
 " Load Control-P with ,p
 nnoremap <leader>p :CtrlP<cr>
+" }}}
+
+" Some useful functions
+" {{{
+" Change to xml edition with folding based on tabs. Ideal for the TW Go CI xml
+function! XMLTime()
+  set filetype=xml
+  set foldmethod=indent
+  set foldlevelstart=2
+endfunction
+command! XMLTime call XMLTime()
+ 
 " }}}
