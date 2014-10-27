@@ -12,6 +12,12 @@ call pathogen#infect('~/.my_vim/vim/bundle')
 set swapfile                  " I want to keep the swapfiles (nvie does not)
 "}}}
 
+" Enable colors in gnome-terminal.
+" see http://askubuntu.com/questions/67/how-do-i-enable-full-color-support-in-vim
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 " Color scheme and look&feel options {{{
 set background=dark
 
