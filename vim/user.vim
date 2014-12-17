@@ -12,7 +12,7 @@ call pathogen#infect('~/.my_vim/vim/bundle')
 set swapfile                  " I want to keep the swapfiles (nvie does not)
 
 source $VIMRUNTIME/mswin.vim  " I DO like the M$ copy&paste (via http://vim.wikia.com/wiki/Copy,_cut_and_paste)
-
+set keymodel-=stopsel         " But I like visual mode too: http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
 "}}}
 
 " Enable colors in gnome-terminal.
@@ -33,16 +33,17 @@ set colorcolumn=80
 
 " set macvim specific stuff
 if has("gui_running")
+  set lines=50 columns=140 " Initial size
+
   if has("gui_gtk2")
     set guifont=Monospace\ 10
   elseif has("gui_macvim")
     set guifont=Monaco:h14
-    macmenu &amp;Edit.Find.Find\.\.\. key=<nop> " free up Command-F
-    map <D-f> :set invfu<CR>                " toggle fullscreen mode
-
-    macmenu &File.Open\ Tab\.\.\. key=<nop> " free up Command-T
-    macmenu &File.New\ Tab key=<D-T>        " 'New Tab' is now Shift-Command-T
+    "macmenu &Edit.Find.Find\.\.\. key=<nop> " free up Command-F
+    "macmenu &File.Open\ Tab\.\.\. key=<nop> " free up Command-T
+    "macmenu &File.New\ Tab key=<D-T>        " 'New Tab' is now Shift-Command-T
     map <D-t> :FuzzyFinderFile<CR>
+    map <D-f> :set invfu<CR>                " toggle fullscreen mode
 
     set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
     "macmenu &File.Open\.\.\. key=<nop>      " free up Command-O
@@ -56,8 +57,6 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
-
-  set lines=50 columns=140 " Initial size
 endif
 
 
