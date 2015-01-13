@@ -12,7 +12,8 @@ call pathogen#infect('~/.my_vim/vim/bundle')
 set swapfile                  " I want to keep the swapfiles (nvie does not)
 
 source $VIMRUNTIME/mswin.vim  " I DO like the M$ copy&paste (via http://vim.wikia.com/wiki/Copy,_cut_and_paste)
-set keymodel-=stopsel         " But I like visual mode too: http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
+behave mswin
+set keymodel-=stopsel         " But I like arrows in visual mode too: http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
 "}}}
 
 " Enable colors in gnome-terminal.
@@ -44,6 +45,10 @@ if has("gui_running")
     "macmenu &File.New\ Tab key=<D-T>        " 'New Tab' is now Shift-Command-T
     map <D-t> :FuzzyFinderFile<CR>
     map <D-f> :set invfu<CR>                " toggle fullscreen mode
+    map <D-Enter> :set invfu<CR>            " toggle fullscreen mode
+
+    " Command-W closes current buffer
+    map <D-w> :bd<CR>                " Command-W closes current buffer
 
     set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
     "macmenu &File.Open\.\.\. key=<nop>      " free up Command-O
@@ -54,6 +59,7 @@ if has("gui_running")
     "imap <D-a> <C-o>A
     "imap <D-i> <C-o>I
     "imap <D-0> <C-o>gI
+
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
@@ -65,9 +71,9 @@ endif
 
 " CtrlP and NerdTree setup {{{
 
-" Shortcuts 
+" Shortcuts
 nnoremap \\ :ProjectRootExe :NERDTreeToggle<CR> " Open Nerdtree
-nnoremap \|\| :ProjectRootExe :CtrlP<CR> " Open Ctrl-P 
+nnoremap \|\| :ProjectRootExe :CtrlP<CR> " Open Ctrl-P
 nnoremap <F11> :ProjectRootExe :NERDTreeToggle<CR> " Open NerdTree with Ctrl+n
 
 " for CtrlP
@@ -142,7 +148,7 @@ function! XMLTime()
   set foldlevelstart=2
 endfunction
 command! XMLTime call XMLTime()
- 
+
 " }}}
 
 " {{{
@@ -157,4 +163,20 @@ onoremap <C-A> <C-C>gggH<C-O>G
 snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 " }}}
+
+" Leader+w remove the trailing whitespaces:
+" http://stackoverflow.com/questions/3474709/delete-all-spaces-and-tabs-at-the-end-of-my-lines
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+noremap <leader>w :call DeleteTrailingWS()<CR>
+
+" Ctrl+W close the current buffer
+noremap <C-w> :bd<CR>
+noremap <C-w> :bd<CR>
+
+" Ctrl+N create an empty buffer
+noremap <C-n> :enew<CR>
 
