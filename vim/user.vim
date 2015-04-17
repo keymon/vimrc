@@ -173,10 +173,15 @@ func! DeleteTrailingWS()
 endfunc
 noremap <leader>w :call DeleteTrailingWS()<CR>
 
+" {{{
+" Add the auto remove trailing spaces before save
+autocmd BufWritePre * :%s/\s\+$//e
+" }}}
+
 " Ctrl+W close the current buffer
 noremap <C-w> :bd<CR>
 noremap <C-w> :bd<CR>
 
-" Ctrl+N create an empty buffer
+" " Ctrl+N create an empty buffer
 noremap <C-n> :enew<CR>
 
