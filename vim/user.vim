@@ -108,7 +108,7 @@ autocmd BufEnter * call rc:syncTree()
 " Close the editor if NerdTree is the last one
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Autoopen Nerd Tree
-autocmd VimEnter * if argc() == 0 | NERDTree | endif
+autocmd VimEnter * if argc() == 0 | NERDTree | wincmd p | endif
 
 
 
