@@ -193,4 +193,7 @@ noremap <C-n> :enew<CR>
 " 'completeopt' option so that Vim's popup menu doesn't select the first
 " completion item, but rather just inserts the longest common text of all matches
 :set completeopt=longest
+
+" Some handy aliases for the ctags
+:noremap <C-[> <C-t>
 " }}}
