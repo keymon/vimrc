@@ -195,5 +195,5 @@ noremap <C-n> :enew<CR>
 :set completeopt=longest
 
 " Some handy aliases for the ctags
-:noremap <C-[> <C-t>
+:noremap <C-}> <C-t>
 " }}}
