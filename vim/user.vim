@@ -90,13 +90,13 @@ let NERDTreeChDirMode=2
 " Sync NerdTree to current file project directory
 " From http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 " returns true if is NERDTree open/active
-function! rc:isNTOpen()
+function! NERDTreeIsOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
 " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! rc:syncTree()
-  if &modifiable && bufname('%') !~# 'NERD_tree_' && rc:isNTOpen() && strlen(ProjectRootGuess()) > 0 && !&diff
+function! NERDTreeSyncTree()
+  if &modifiable && bufname('%') !~# 'NERD_tree_' && NERDTreeIsOpen() && strlen(ProjectRootGuess()) > 0 && !&diff
     ProjectRootCD
     NERDTreeCWD
     wincmd p
@@ -104,7 +104,7 @@ function! rc:syncTree()
 endfunction
 
 " Whenever we change the buffer, sync the tree of NerdTree
-autocmd BufEnter * call rc:syncTree()
+autocmd BufEnter * call NERDTreeSyncTree()
 " Close the editor if NerdTree is the last one
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Autoopen Nerd Tree
