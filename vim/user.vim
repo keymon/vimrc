@@ -178,10 +178,6 @@ noremap <leader>w :call DeleteTrailingWS()<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 " }}}
 
-" Ctrl+W close the current buffer
-noremap <C-w> :bd<CR>
-noremap <C-w> :bd<CR>
-
 " " Ctrl+N create an empty buffer
 noremap <C-n> :enew<CR>
 
