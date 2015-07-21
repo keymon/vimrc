@@ -132,3 +132,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim/bundle/vim-diffsaved"]
+	path = vim/bundle/vim-diffsaved
+	url = git@github.com:gangleri/vim-diffsaved.git
