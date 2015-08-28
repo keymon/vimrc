@@ -534,12 +534,6 @@ if has("autocmd")
         autocmd BufNewFile,BufRead supervisord.conf set ft=dosini
     augroup end " }}}
 
-    augroup markdown_files "{{{
-        au!
-
-        autocmd filetype markdown noremap <buffer> <leader>p :w<CR>:!open -a Marked %<CR><CR>
-    augroup end " }}}
-
     augroup ruby_files "{{{
         au!
 
