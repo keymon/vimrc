@@ -1,0 +1,59 @@
+*diffsaved.txt*  Compare current buffer with last saved
+
+
+8""""8              8""""8                         
+8    8 e  eeee eeee 8      eeeee ee   e eeee eeeee 
+8e   8 8  8    8    8eeeee 8   8 88   8 8    8   8 
+88   8 8e 8eee 8eee     88 8eee8 88  e8 8eee 8e  8 
+88   8 88 88   88   e   88 88  8  8  8  88   88  8 
+88eee8 88 88   88   8eee88 88  8  8ee8  88ee 88ee8 
+
+
+Show the difference between what is in the buffer and 
+what was last written to disk.
+
+=====================================================
+CONTENTS                          *DiffSavedContents*
+
+1. Introduction ..................|DiffSavedIntro|
+2. Usage .........................|DiffSavedUsage|
+3. Mappings ......................|DiffSaveMappings|
+
+
+=====================================================
+1. Introduction                      *DiffSavedIntro*
+
+Simple plugin that will show the differences between
+the current buffer and those that were last saved. It
+has two modes, the first a simple text based output
+lists the changed lines |DiffSaved|. The second uses
+vimdiff to give a side by side comparison |VDiffSaved|.
+
+
+=====================================================
+2. Usage                             *DiffSavedUsage*
+
+*DiffSaved* - Provides simple text output listing the
+lines that have changed since the last write.
+
+Example:
+
+
+*VDiffSaved* - Visual comparison of the contents of the
+buffer and what was last saved. It uses |vimdiff| to
+give a side by comparison and allows you to undo part
+or all of your changes.
+
+*ToggleVDiffSaved* - Helper that will show/hide 
+|VDiffSaved| comparison.
+
+
+=====================================================
+3. Mapings                         *DiffSaveMappings*
+
+<leader>ds - Pressing leader ds in normal mode will
+by default will toggle VDiffSaved. you are free to 
+remap this in your vimrc.
+
+
+=====================================================
