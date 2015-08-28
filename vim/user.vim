@@ -134,6 +134,11 @@ nnoremap <down> gj
 nnoremap <up> gk
 nnoremap <left> h
 nnoremap <right> l
+" Arrow keys move naturally in wrapped lines
+vnoremap <down> gj
+vnoremap <up> gk
+inoremap <down> <C-o>gj
+inoremap <up> <C-o>gk
 
 " Load Control-P with ,p
 nnoremap <leader>p :CtrlP<cr>
