@@ -138,3 +138,6 @@
 [submodule "vim/bundle/vim-diffsaved"]
 	path = vim/bundle/vim-diffsaved
 	url = git@github.com:gangleri/vim-diffsaved.git
+[submodule "vim/bundle/vim-terraform"]
+	path = vim/bundle/vim-terraform
+	url = https://github.com/markcornick/vim-terraform
