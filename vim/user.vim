@@ -79,7 +79,7 @@ nnoremap <F11> :ProjectRootExe :NERDTreeToggle<CR> " Open NerdTree with Ctrl+n
 " for CtrlP
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.class,*.jar
 let g:ctrlp_root_markers = ['.git', '.acignore', '.gitignore']
-let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_by_filename = 1
 
 " NERDTtree
