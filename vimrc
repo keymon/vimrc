@@ -521,9 +521,6 @@ if has("autocmd")
         autocmd filetype python noremap <buffer> <S-F5> :w<CR>:!ipython %<CR>
         autocmd filetype python inoremap <buffer> <S-F5> <Esc>:w<CR>:!ipython %<CR>
 
-        " Toggling True/False
-        autocmd filetype python nnoremap <silent> <C-t> mmviw:s/True\\|False/\={'True':'False','False':'True'}[submatch(0)]/<CR>`m:nohlsearch<CR>
-
         " Run a quick static syntax check every time we save a Python file
         autocmd BufWritePost *.py call Flake8()
 
@@ -569,9 +566,6 @@ if has("autocmd")
         autocmd filetype javascript setlocal expandtab
         autocmd filetype javascript setlocal listchars=trail:·,extends:#,nbsp:·
         autocmd filetype javascript setlocal foldmethod=marker foldmarker={,}
-
-        " Toggling True/False
-        autocmd filetype javascript nnoremap <silent> <C-t> mmviw:s/true\\|false/\={'true':'false','false':'true'}[submatch(0)]/<CR>`m:nohlsearch<CR>
 
         " Enable insertion of "debugger" statement in JS files
         autocmd filetype javascript nnoremap <leader>b Odebugger;<esc>
