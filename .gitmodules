@@ -150,3 +150,6 @@
 [submodule "vim/bundle/vim-neocomplete"]
 	path = vim/bundle/vim-neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
+[submodule "vim/bundle/table-mode"]
+	path = vim/bundle/table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git
