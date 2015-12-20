@@ -1,3 +1,8 @@
+map <ESC>[5D <C-Left>
+map <ESC>[5C <C-Right>
+map! <ESC>[5D <C-Left>
+map! <ESC>[5C <C-Right>
+
 " User/machine-specific settings go in here
 " This file won't be included in version control and may therefore be used for
 " machine-dependent settings.
@@ -116,10 +121,10 @@ autocmd VimEnter * if argc() == 0 | NERDTree | wincmd p | endif
 
 " Navigation {{{
 " Map Ctrl+Arrows in mac
-"map! <ESC>[OA <C-Up>
-"map! <ESC>[OB <C-Down>
-"map! <ESC>[OD <C-Left>
-"map! <ESC>[OC <C-Right>
+"imap <Esc>[OA <Esc>ki
+"imap <Esc>[OB <Esc>ji
+"imap <Esc>[OC <Esc>li
+"imap <Esc>[OD <Esc>hi
 
 " User Ctrl+Arrows to switch buffers... In NerdTree that exits nerdtree
 map <expr> <C-Right> bufname('%') !~# 'NERD_tree_' ? ":bn<CR>" : ":wincmd p<CR>"
@@ -198,3 +203,13 @@ noremap <C-n> :enew<CR>
 " Some handy aliases for the ctags
 :noremap <C-}> <C-t>
 " }}}
+
+nnoremap <F8> :TagbarToggle<CR> " Open TagBar
+
+
+" Fix issue with cursors in vim with fast repeat keys and slow bufferline
+au FileType gitcommit au! bufferline InsertLeave
+au FileType gitcommit au! InsertLeave
+au FileType gitcommit au! supertab_retain  InsertLeave
+au FileType gitcommit au! unimpaired_paste  InsertLeave
+au FileType gitcommit au! YankRing InsertLeave
