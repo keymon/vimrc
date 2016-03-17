@@ -181,14 +181,14 @@ noremap <C-n> :enew<CR>
 " {{{
 " Completion configuration
 " Enter key will simply select the highlighted menu item, just as <C-Y> does
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " 'completeopt' option so that Vim's popup menu doesn't select the first
 " completion item, but rather just inserts the longest common text of all matches
-:set completeopt=longest
+set completeopt=longest
 
 " Some handy aliases for the ctags
-:noremap <C-}> <C-t>
+noremap <C-}> <C-t>
 " }}}
 
 nnoremap <F8> :TagbarToggle<CR> " Open TagBar
