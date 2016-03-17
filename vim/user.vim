@@ -161,19 +161,6 @@ command! XMLTime call XMLTime()
 
 " }}}
 
-" {{{
-" CTRL+I increments
-noremap <C-I> <C-A>
-
-" CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
-" }}}
-
 " Leader+w remove the trailing whitespaces:
 " http://stackoverflow.com/questions/3474709/delete-all-spaces-and-tabs-at-the-end-of-my-lines
 func! DeleteTrailingWS()
@@ -205,6 +192,16 @@ noremap <C-n> :enew<CR>
 " }}}
 
 nnoremap <F8> :TagbarToggle<CR> " Open TagBar
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+xnoremap <C-A> <C-C>ggVG
+" }}}
+
 
 
 " Fix issue with cursors in vim with fast repeat keys and slow bufferline
