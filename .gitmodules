@@ -98,9 +98,6 @@
 [submodule "vim/bundle/linters.vim"]
 	path = vim/bundle/linters.vim
 	url = https://bitbucket.org/keymon/linters.vim
-[submodule "vim/bundle/vim-mkdir-on-write"]
-	path = vim/bundle/vim-mkdir-on-write
-	url = git@github.com:keymon/vim-mkdir-on-write.git
 [submodule "vim/bundle/vim-bufferline"]
 	path = vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
