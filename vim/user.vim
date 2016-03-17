@@ -13,14 +13,6 @@ map! <ESC>[5C <C-Right>
 " Load my own modules in a different location than .vim
 call pathogen#infect('~/.my_vim/vim/bundle')
 
-" Misc options and settings {{{
-set swapfile                  " I want to keep the swapfiles (nvie does not)
-
-source $VIMRUNTIME/mswin.vim  " I DO like the M$ copy&paste (via http://vim.wikia.com/wiki/Copy,_cut_and_paste)
-behave mswin
-set keymodel-=stopsel         " But I like arrows in visual mode too: http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
-"}}}
-
 " Enable colors in gnome-terminal.
 " see http://askubuntu.com/questions/67/how-do-i-enable-full-color-support-in-vim
 if $COLORTERM == 'gnome-terminal'
@@ -192,6 +184,68 @@ noremap <C-}> <C-t>
 " }}}
 
 nnoremap <F8> :TagbarToggle<CR> " Open TagBar
+
+" Misc options and settings {{{
+set swapfile                  " I want to keep the swapfiles (nvie does not)
+
+source $VIMRUNTIME/mswin.vim  " I DO like the M$ copy&paste (via http://vim.wikia.com/wiki/Copy,_cut_and_paste)
+behave mswin
+set keymodel-=stopsel         " But I like arrows in visual mode too: http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V>       "+gP
+map <S-Insert>  "+gP
+
+cmap <C-V>      <C-R>+
+cmap <S-Insert> <C-R>+
+
+" Pasting blockwise and linewise selections is not possible in Insert and
+" Visual mode without the +virtualedit feature.  They are pasted as if they
+" were characterwise instead.
+" Uses the paste.vim autoload script.
+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+imap <S-Insert> <C-V>
+vmap <S-Insert> <C-V>
+
+" Use CTRL-Q to do what CTRL-V used to do
+noremap <C-Q>   <C-V>
+
+" From http://vim.wikia.com/wiki/Shifting_blocks_visually
+" tabbing changes does not remove selection
+vnoremap > >gv
+vnoremap < <gv
+
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+snoremap <Tab> >gv
+snoremap <S-Tab> <gv
+
+
+"}}}
+
+imap <C-kPlus>  <ESC>:call LargerFont()<CR>i
+nmap <C-kPlus>  :call LargerFont()<CR>
+
+imap <C-kMinus> <ESC>:call SmallerFont()<CR>i
+nmap <C-kMinus> :call SmallerFont()<CR>
+
+" {{{
+" CTRL+I increments
+noremap <C-I> <C-A>
 
 " CTRL-A is Select all
 noremap <C-A> gggH<C-O>G
