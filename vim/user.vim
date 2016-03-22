@@ -264,3 +264,7 @@ au FileType gitcommit au! InsertLeave
 au FileType gitcommit au! supertab_retain  InsertLeave
 au FileType gitcommit au! unimpaired_paste  InsertLeave
 au FileType gitcommit au! YankRing InsertLeave
+
+" Close current buffer (Upper case to force close)
+noremap <leader>q :bd<CR>
+noremap <leader>Q :bd!<CR>
