@@ -268,3 +268,7 @@ au FileType gitcommit au! YankRing InsertLeave
 " Close current buffer (Upper case to force close)
 noremap <leader>q :bd<CR>
 noremap <leader>Q :bd!<CR>
+
+" Go code with 2 tab width, but no expand tabs
+au BufNewFile,BufRead *.go setlocal noet ts=2 sw=2 sts=2
+
