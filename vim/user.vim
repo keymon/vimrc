@@ -262,7 +262,7 @@ xnoremap <C-A> <C-C>ggVG
 au FileType gitcommit au! bufferline InsertLeave
 au FileType gitcommit au! InsertLeave
 au FileType gitcommit au! supertab_retain  InsertLeave
-au FileType gitcommit au! unimpaired_paste  InsertLeave
+"au FileType gitcommit au! unimpaired_paste  InsertLeave
 au FileType gitcommit au! YankRing InsertLeave
 
 " Close current buffer (Upper case to force close)
@@ -272,3 +272,10 @@ noremap <leader>Q :bd!<CR>
 " Go code with 2 tab width, but no expand tabs
 au BufNewFile,BufRead *.go setlocal noet ts=2 sw=2 sts=2
 
+au BufNewFile,BufRead *.go let g:go_fmt_command = "goimports"
+
+" Try to make vim syntax highlight faster
+" See: https://github.com/fatih/vim-go/issues/145
+set nocursorcolumn
+syntax sync minlines=256
+set re=1

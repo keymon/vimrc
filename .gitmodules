@@ -138,9 +138,6 @@
 [submodule "vim/bundle/vim-terraform"]
 	path = vim/bundle/vim-terraform
 	url = https://github.com/markcornick/vim-terraform
-[submodule "vim/bundle/vim-gocode"]
-	path = vim/bundle/vim-gocode
-	url = git@github.com:Blackrush/vim-gocode.git
 [submodule "vim/bundle/vim-tagbar"]
 	path = vim/bundle/vim-tagbar
 	url = https://github.com/majutsushi/tagbar
