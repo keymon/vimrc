@@ -20,6 +20,10 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " Color scheme and look&feel options {{{
+
+" Low highlight for the list chars
+let g:solarized_visibility='low'
+
 set background=dark
 
 let g:solarized_termcolors=256
