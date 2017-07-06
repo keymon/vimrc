@@ -76,6 +76,11 @@ endif
 nnoremap \\ :ProjectRootExe :NERDTreeToggle<CR> " Open Nerdtree
 nnoremap \|\| :ProjectRootExe :CtrlP<CR> " Open Ctrl-P
 nnoremap <F11> :ProjectRootExe :NERDTreeToggle<CR> " Open NerdTree with Ctrl+n
+nnoremap <F11> :ProjectRootExe :NERDTreeToggle<CR> " Open NerdTree with Ctrl+n
+
+" via http://tilvim.com/2013/07/31/swapping-bg.html
+nnoremap <F9> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " for CtrlP
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.class,*.jar
