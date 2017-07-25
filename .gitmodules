@@ -43,7 +43,7 @@
 	ignore = dirty
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
-	url = git@github.com:klen/python-mode.git
+	url = https://github.com/klen/python-mode.git
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
@@ -103,10 +103,10 @@
 	url = https://github.com/bling/vim-bufferline.git
 [submodule "vim/bundle/jellybeans.vim"]
 	path = vim/bundle/jellybeans.vim
-	url = git@github.com:nanotech/jellybeans.vim.git
+	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "vim/bundle/vim-pyunit"]
 	path = vim/bundle/vim-pyunit
-	url = git@github.com:nvie/vim-pyunit.git
+	url = https://github.com/nvie/vim-pyunit.git
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort
@@ -125,7 +125,7 @@
 	url = git://github.com/vim-ruby/vim-ruby.git
 [submodule "vim/bundle/golang"]
 	path = vim/bundle/golang
-	url = git@github.com:jnwhiteh/vim-golang.git
+	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
@@ -134,7 +134,7 @@
 	url = https://github.com/solars/github-vim
 [submodule "vim/bundle/vim-diffsaved"]
 	path = vim/bundle/vim-diffsaved
-	url = git@github.com:gangleri/vim-diffsaved.git
+	url = https://github.com/gangleri/vim-diffsaved.git
 [submodule "vim/bundle/vim-terraform"]
 	path = vim/bundle/vim-terraform
 	url = https://github.com/markcornick/vim-terraform
@@ -146,7 +146,7 @@
 	url = https://github.com/Shougo/neocomplete.vim
 [submodule "vim/bundle/table-mode"]
 	path = vim/bundle/table-mode
-	url = git@github.com:dhruvasagar/vim-table-mode.git
+	url = https://github.com/dhruvasagar/vim-table-mode.git
 [submodule "vim/bundle/vim-yaml"]
 	path = vim/bundle/vim-yaml
 	url = https://github.com/stephpy/vim-yaml
