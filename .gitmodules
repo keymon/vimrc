@@ -1,24 +1,24 @@
 [submodule "vim/bundles/snipmate_for_django"]
 	path = vim/bundles/snipmate_for_django
-	url = git://github.com/robhudson/snipmate_for_django.git
+	url = https://github.com/robhudson/snipmate_for_django.git
 [submodule "vim/bundle/snipmate_for_django"]
 	path = vim/bundle/snipmate_for_django
-	url = git://github.com/robhudson/snipmate_for_django.git
+	url = https://github.com/robhudson/snipmate_for_django.git
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/toggle_mouse"]
 	path = vim/bundle/toggle_mouse
-	url = git://github.com/nvie/vim-togglemouse.git
+	url = https://github.com/nvie/vim-togglemouse.git
 [submodule "vim/bundle/rst_tables"]
 	path = vim/bundle/rst_tables
-	url = git://github.com/nvie/vim-rst-tables.git
+	url = https://github.com/nvie/vim-rst-tables.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
@@ -30,7 +30,7 @@
 	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/flake8"]
 	path = vim/bundle/flake8
-	url = git://github.com/nvie/vim-flake8.git
+	url = https://github.com/nvie/vim-flake8.git
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
@@ -46,16 +46,16 @@
 	url = https://github.com/klen/python-mode.git
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
-	url = git://github.com/mattn/gist-vim.git
+	url = https://github.com/mattn/gist-vim.git
 [submodule "webapi-vim"]
 	path = webapi-vim
-	url = git://github.com/mattn/webapi-vim.git
+	url = https://github.com/mattn/webapi-vim.git
 [submodule "vim/bundle/vim-flake8"]
 	path = vim/bundle/vim-flake8
-	url = git://github.com/nvie/vim-flake8.git
+	url = https://github.com/nvie/vim-flake8.git
 [submodule "vim/bundle/fish"]
 	path = vim/bundle/fish
-	url = git://github.com/vim-scripts/fish.vim.git
+	url = https://github.com/vim-scripts/fish.vim.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
@@ -122,7 +122,7 @@
 	url = https://github.com/altercation/vim-colors-solarized
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
+	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "vim/bundle/golang"]
 	path = vim/bundle/golang
 	url = https://github.com/jnwhiteh/vim-golang.git
