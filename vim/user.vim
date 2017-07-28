@@ -36,6 +36,7 @@ set colorcolumn=80
 " set macvim specific stuff
 if has("gui_running")
   set lines=50 columns=140 " Initial size
+  set guioptions-=m  "remove menu bar
 
   if has("gui_gtk2")
     set guifont=Monospace\ 10
