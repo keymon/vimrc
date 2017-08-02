@@ -49,6 +49,17 @@ if has("gui_running")
     map <D-f> :set invfu<CR>                " toggle fullscreen mode
     map <D-Enter> :set invfu<CR>            " toggle fullscreen mode
 
+    " Make the "Insert" key of my keyboard work as it does in Linux, to change
+    " insert/replace mode. Thx to https://www.reddit.com/r/osx/comments/1t5kad/make_insert_key_work_in_vim_like_it_does_in_linux/
+    noremap <Help> <Insert>
+    noremap! <Help> <Insert>
+    noremap! <S-Help> "+gP
+    imap <S-Help> <C-V>
+    vmap <S-Help> <C-V>
+    vnoremap <C-Help> "+y
+    imap <C-Help> <C-C>
+    vmap <C-Help> <C-C>
+
     " Command-W closes current buffer
     map <D-w> :bd<CR>                " Command-W closes current buffer
 
