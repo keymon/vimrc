@@ -299,4 +299,7 @@ au BufNewFile,BufRead *.go let g:go_fmt_command = "goimports"
 " See: https://github.com/fatih/vim-go/issues/145
 set nocursorcolumn
 syntax sync minlines=256
-set re=1
+
+if exists('&regexpengine')
+  set regexpengine=1
+endif
