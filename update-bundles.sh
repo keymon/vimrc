@@ -8,7 +8,7 @@ set -e
 				cd "$submodule"
 				echo "===> $submodule"
 
-				if git branches | grep -q develop; then
+				if git branch -a | grep -q develop; then
 					git checkout --quiet develop
 				else
 					git checkout --quiet master
