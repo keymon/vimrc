@@ -60,7 +60,12 @@ set virtualedit=all             " allow the cursor to go in to "invalid" places
 set hlsearch                    " highlight search terms
 set incsearch                   " show search matches as you type
 set gdefault                    " search/replace "globally" (on a line) by default
-set listchars=eol:¬,tab:▸\ ,trail:·,space:␣,extends:>,precedes:<,nbsp:·
+
+if has("patch-7.4.710")
+   set listchars=eol:¬,tab:▸\ ,trail:·,space:␣,extends:>,precedes:<,nbsp:·
+else
+   set listchars=eol:¬,tab:▸\ ,trail:·,extends:>,precedes:<,nbsp:·
+endif
 
 set nolist                      " don't show invisible characters by default,
                                 " but it is enabled for some file types (see later)
