@@ -840,5 +840,10 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Extra user or machine specific settings {{{
 source ~/.vim/user.vim
+try
+  source ~/.vim/local.vim
+catch
+  " No such file? No problem; just ignore it.
+endtry
 " }}}
 
