@@ -150,3 +150,6 @@
 [submodule "vim/bundle/vim-yaml"]
 	path = vim/bundle/vim-yaml
 	url = https://github.com/stephpy/vim-yaml
+[submodule "vim/bundle/vim-rhubarb"]
+	path = vim/bundle/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
