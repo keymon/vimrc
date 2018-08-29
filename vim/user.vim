@@ -39,7 +39,7 @@ if has("gui_running")
   set guioptions-=m  "remove menu bar
 
   if has("gui_gtk2")
-    set guifont=Monospace\ 10
+    set guifont=Monospace\ 12
   elseif has("gui_macvim")
     set guifont=Monaco:h14
     "macmenu &Edit.Find.Find\.\.\. key=<nop> " free up Command-F
