@@ -298,3 +298,21 @@ syntax sync minlines=256
 if exists('&regexpengine')
   set regexpengine=1
 endif
+
+" Fix open browser from gvim https://vi.stackexchange.com/a/5034
+let g:netrw_browsex_viewer="setsid xdg-open"
+
+" Format the terraform files on save
+let g:terraform_fmt_on_save=1
+" terraform folding
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+
+" tabnine
+let g:ycm_filetype_specific_completion_to_disable = {
+      \ 'gitcommit': 1,
+      \ 'markdown': 1
+      \}
+
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR> " turn off YCM
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR> " turn on YCM
