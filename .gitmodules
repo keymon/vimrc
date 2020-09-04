@@ -165,3 +165,6 @@
 [submodule "vim/bundle/vimproc.vim"]
 	path = vim/bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim
+[submodule "vim/bundle/tabnine-vim"]
+	path = vim/bundle/tabnine-vim
+	url = ssh://git@github.com/zxqfl/tabnine-vim
