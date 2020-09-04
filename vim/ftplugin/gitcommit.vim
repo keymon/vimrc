@@ -5,3 +5,5 @@ setlocal autoindent
 setlocal spell
 setlocal textwidth=72
 setlocal colorcolumn=72
+
+let g:ycm_auto_trigger=0
