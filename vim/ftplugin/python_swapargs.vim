@@ -2,7 +2,7 @@
 " swap_parameters.vim - swap parameters - fun(arg2, arg1, arg3)
 " Author: Kamil Dworakowski <kamil-at-dworakowski.name>
 " Version: 1.1.3
-" Last Change: 2008-02-07 
+" Last Change: 2008-02-07
 " URL: http://blog.kamil.dworakowski.name
 " Requires: Python and Vim compiled with +python option
 " Licence: This script is released under the Vim License.
@@ -23,7 +23,7 @@
 " On each line the lefthand side shows the line before typing gr, and
 " the righthand side shows the effect. The cursor position is depicted
 " with || symbols. par|m|1 means that the cursor is on the character m.
-" 
+"
 "                   fun(par|m|1, parm2)                    fun(parm2, parm|1|)
 "                 fun(par|m|1(), parm2)                  fun(parm2, parm1(|)|)
 "                 fun(parm1(|)|, parm2)                  fun(parm2, parm1(|)|)
@@ -71,7 +71,7 @@
 "
 " You would put cursor on arg2, and the gsjgsjgs
 "
-" 
+"
 " This script is written in python. Therefore it needs
 " vim copiled with +python option, as well as python installed
 " in the system. Sorry for those of you who don't have it
@@ -79,7 +79,7 @@
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !has('python')
-    s:ErrMsg( "Error: Required vim compiled with +python" )
+    " s:ErrMsg( "Error: Required vim compiled with +python" )
     finish
 endif
 
@@ -101,7 +101,7 @@ class Direction(object):
 
     def isForward(self):
         return not self.isBackward()
-    
+
 
 class RightwardDirection(Direction):
     openingBrackets = leftBrackets
@@ -141,7 +141,7 @@ def SwapParams(direction, line, col):
         rightBracketIndex = findFirst(rightBrackets.__contains__,
                                  iter(line[col:]),
                                  RightwardDirection()
-        ) 
+        )
         return rightBracketIndex == -1
 
     noEncloseBrackets = areThereNoEnclosinBrackets()
@@ -158,7 +158,7 @@ def SwapParams(direction, line, col):
                              prefixRev,
                              LeftwardDirection(),
                              eolIsDelimiter=True
-            ) 
+            )
 
         if direction.isForward() and noEncloseBrackets:
             toTheLeft += findNextLeftSeparator(separators=[' '])
@@ -178,8 +178,8 @@ def SwapParams(direction, line, col):
 
     input = iter(line[start:])
     param1start = start + findFirst(nonwhitespace, input)
-    param1end = param1start + findFirst(lambda x: x == ',', 
-            iter(line[param1start:]), 
+    param1end = param1start + findFirst(lambda x: x == ',',
+            iter(line[param1start:]),
             RightwardDirection()
     ) - 1
     param2start = param1end + 2 + findFirst(nonwhitespace, iter(line[param1end+2:]))
@@ -187,9 +187,9 @@ def SwapParams(direction, line, col):
     if noEncloseBrackets:
         rightSeparators = [' ', ',']
     param2end = param2start - 1 + findFirst(
-                                    rightSeparators.__contains__, 
-                                    iter(line[param2start:]), 
-                                    RightwardDirection(), 
+                                    rightSeparators.__contains__,
+                                    iter(line[param2start:]),
+                                    RightwardDirection(),
                                     eolIsDelimiter=True)
 
     if direction.isForward():
@@ -197,8 +197,8 @@ def SwapParams(direction, line, col):
     else:
         cursorPos = param1start
 
-    return (line[:param1start] 
-          + line[param2start: param2end+1] 
+    return (line[:param1start]
+          + line[param2start: param2end+1]
           + line[param1end+1: param2start]
           + line[param1start: param1end+1]
           + line[param2end+1:],
@@ -214,7 +214,7 @@ def SwapBackwards(line, col):
 EOF
 
 if a:directionName == 'backwards'
-    python Swap = SwapBackwards 
+    python Swap = SwapBackwards
 endif
 
 python << EOF
