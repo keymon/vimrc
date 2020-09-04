@@ -156,3 +156,12 @@
 [submodule "vim/bundle/typescript-vim"]
 	path = vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/bundle/vim-delve"]
+	path = vim/bundle/vim-delve
+	url = https://github.com/sebdah/vim-delve
+[submodule "vim/bundle/vimshell.vim"]
+	path = vim/bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim
+[submodule "vim/bundle/vimproc.vim"]
+	path = vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim
