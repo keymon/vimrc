@@ -642,8 +642,10 @@ if has("gui_running")
     "set guifont=Anonymous\ for\ Powerline:h12 linespace=2
     "set guifont=Mensch\ for\ Powerline:h14 linespace=0
     "set guifont=Droid\ Sans\ Mono:h14 linespace=0
-    set guifont=Ubuntu\ Mono:h18 linespace=3
+    "set guifont=Ubuntu\ Mono:h18 linespace=3
     "set guifont=Source\ Code\ Pro\ Light:h14 linespace=0
+    set guifont=DejaVu\ Sans\ Mono\ 14
+
 
     "colorscheme molokai
     "colorscheme railscat
