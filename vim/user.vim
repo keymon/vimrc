@@ -38,8 +38,8 @@ if has("gui_running")
   set lines=50 columns=140 " Initial size
   set guioptions-=m  "remove menu bar
 
-  if has("gui_gtk2")
-    set guifont=DejaVu\ Sans\ Mono\ 14
+  if has("gui_gtk2") || has("gui_gtk3")
+    set guifont=Monospace\ 12
   elseif has("gui_macvim")
     set guifont=Monaco:h14
     "macmenu &Edit.Find.Find\.\.\. key=<nop> " free up Command-F
